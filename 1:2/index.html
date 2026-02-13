@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Notification Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="kn-app">
+      <!-- Top Bar -->
+      <header class="kn-topbar">
+        <div class="kn-topbar__section kn-topbar__section--left">
+          <a href="/" class="kn-topbar__brand" data-route-key="home">
+            <span class="kn-topbar__project-mark">JNT</span>
+            <span class="kn-topbar__project-name">Job Notification Tracker</span>
+          </a>
+        </div>
+        <div class="kn-topbar__section kn-topbar__section--center">
+          <nav class="kn-nav" aria-label="Job Notification Tracker primary">
+            <button
+              class="kn-nav__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kn-nav-menu"
+            >
+              <span class="kn-nav__toggle-lines" aria-hidden="true">
+                <span class="kn-nav__toggle-line"></span>
+                <span class="kn-nav__toggle-line"></span>
+                <span class="kn-nav__toggle-line"></span>
+              </span>
+              <span class="kn-nav__toggle-label">Menu</span>
+            </button>
+            <ul class="kn-nav__list" id="kn-nav-menu">
+              <li class="kn-nav__item">
+                <a
+                  href="/dashboard"
+                  class="kn-nav__link"
+                  data-route-key="dashboard"
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li class="kn-nav__item">
+                <a href="/saved" class="kn-nav__link" data-route-key="saved">
+                  Saved
+                </a>
+              </li>
+              <li class="kn-nav__item">
+                <a href="/digest" class="kn-nav__link" data-route-key="digest">
+                  Digest
+                </a>
+              </li>
+              <li class="kn-nav__item">
+                <a
+                  href="/settings"
+                  class="kn-nav__link"
+                  data-route-key="settings"
+                >
+                  Settings
+                </a>
+              </li>
+              <li class="kn-nav__item">
+                <a href="/proof" class="kn-nav__link" data-route-key="proof">
+                  Proof
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="kn-topbar__section kn-topbar__section--right">
+          <span class="kn-badge kn-badge--status kn-badge--status-in-progress"
+            >Skeleton</span
+          >
+        </div>
+      </header>
+
+      <main class="kn-main">
+        <!-- Landing / Route Container -->
+        <section class="kn-route" id="route-root" aria-live="polite"></section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
