@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KodNest Premium Build System – Design System Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="kn-app">
+      <!-- Top Bar -->
+      <header class="kn-topbar">
+        <div class="kn-topbar__section kn-topbar__section--left">
+          <span class="kn-topbar__project-name">KodNest Premium Build System</span>
+        </div>
+        <div class="kn-topbar__section kn-topbar__section--center">
+          <span class="kn-topbar__progress">Step 1 / 4</span>
+        </div>
+        <div class="kn-topbar__section kn-topbar__section--right">
+          <span class="kn-badge kn-badge--status kn-badge--status-in-progress">In Progress</span>
+        </div>
+      </header>
+
+      <main class="kn-main">
+        <!-- Context Header -->
+        <section class="kn-context-header">
+          <h1 class="kn-heading-1">Define this build with calm precision</h1>
+          <p class="kn-context-header__subtext">
+            Capture what this build should achieve so every decision that follows is deliberate and verifiable.
+          </p>
+        </section>
+
+        <!-- Primary Workspace + Secondary Panel -->
+        <section class="kn-layout">
+          <!-- Primary Workspace -->
+          <section class="kn-workspace">
+            <!-- Example workspace card: Specification -->
+            <article class="kn-card">
+              <header class="kn-card__header">
+                <h2 class="kn-heading-3">Specification overview</h2>
+                <p class="kn-card__subtitle">
+                  Describe the intent of this build in clear, testable terms.
+                </p>
+              </header>
+              <div class="kn-card__body">
+                <div class="kn-field">
+                  <label class="kn-field__label" for="build-title">Build title</label>
+                  <input
+                    class="kn-input"
+                    id="build-title"
+                    name="build-title"
+                    type="text"
+                    placeholder="Short, neutral description of the build"
+                  />
+                  <p class="kn-field__hint">
+                    Keep this factual and specific. This title should read clearly in status and proof views.
+                  </p>
+                </div>
+
+                <div class="kn-field kn-field--stacked">
+                  <label class="kn-field__label" for="build-summary">Build summary</label>
+                  <textarea
+                    class="kn-input kn-input--textarea"
+                    id="build-summary"
+                    name="build-summary"
+                    rows="4"
+                    placeholder="Outline the core behaviour, constraints, and success criteria for this build."
+                  ></textarea>
+                </div>
+
+                <!-- Example empty state card inside workspace -->
+                <section class="kn-empty">
+                  <h3 class="kn-empty__title">No concrete scenarios defined yet</h3>
+                  <p class="kn-empty__body">
+                    Add at least one scenario that describes how this build will be used in practice.
+                  </p>
+                  <button class="kn-button kn-button--primary" type="button">
+                    Add first scenario
+                  </button>
+                </section>
+              </div>
+            </article>
+
+            <!-- Example workspace card: Error guidance -->
+            <article class="kn-card">
+              <header class="kn-card__header">
+                <h2 class="kn-heading-3">Validation feedback</h2>
+              </header>
+              <div class="kn-card__body">
+                <div class="kn-alert kn-alert--error">
+                  <div class="kn-alert__content">
+                    <h3 class="kn-alert__title">We could not verify this specification yet.</h3>
+                    <p class="kn-alert__body">
+                      Some required fields are still empty. Complete the title and summary, then try again. Your
+                      notes are preserved while you update them.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="kn-alert kn-alert--success">
+                  <div class="kn-alert__content">
+                    <h3 class="kn-alert__title">Specification looks consistent.</h3>
+                    <p class="kn-alert__body">
+                      All required inputs are present and aligned. You can proceed to implementation or refine the
+                      details further.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Secondary Panel -->
+          <aside class="kn-panel">
+            <article class="kn-card kn-card--panel">
+              <header class="kn-card__header">
+                <h2 class="kn-heading-3">This step in context</h2>
+                <p class="kn-card__subtitle">
+                  A concise, verifiable description here reduces rework and clarifies when the build is truly done.
+                </p>
+              </header>
+
+              <div class="kn-card__body kn-card__body--stacked">
+                <!-- Step explanation -->
+                <section class="kn-panel-section">
+                  <h3 class="kn-panel-section__title">What matters here</h3>
+                  <p class="kn-panel-section__body">
+                    Focus on observable outcomes: what should be true when this build is complete, independent of
+                    implementation details.
+                  </p>
+                </section>
+
+                <!-- Copyable prompt box -->
+                <section class="kn-panel-section">
+                  <div class="kn-field">
+                    <label class="kn-field__label" for="prompt-box">Prompt for external tools</label>
+                    <div class="kn-prompt">
+                      <pre id="prompt-box" class="kn-prompt__content" aria-label="Copyable prompt" tabindex="0">
+Use this build step to describe the behaviour in neutral, testable language. 
+Avoid hype, keep each requirement observable, and ensure it can be proven in the Proof Footer.</pre
+                      >
+                      <button class="kn-button kn-button--secondary kn-button--compact" type="button">
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Panel actions -->
+                <section class="kn-panel-section kn-panel-section--actions">
+                  <button class="kn-button kn-button--secondary" type="button">
+                    Copy
+                  </button>
+                  <button class="kn-button kn-button--primary" type="button">
+                    Build in Lovable
+                  </button>
+                  <button class="kn-button kn-button--secondary kn-button--success" type="button">
+                    It Worked
+                  </button>
+                  <button class="kn-button kn-button--secondary kn-button--error" type="button">
+                    Error
+                  </button>
+                  <button class="kn-button kn-button--secondary" type="button">
+                    Add Screenshot
+                  </button>
+                </section>
+              </div>
+            </article>
+          </aside>
+        </section>
+      </main>
+
+      <!-- Proof Footer -->
+      <footer class="kn-proof-footer">
+        <div class="kn-proof-footer__inner">
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input class="kn-checkbox" type="checkbox" />
+              <span class="kn-proof-item__text">UI Built</span>
+            </label>
+            <input
+              class="kn-input kn-input--proof"
+              type="text"
+              placeholder="Link or note confirming the UI has been implemented."
+            />
+          </div>
+
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input class="kn-checkbox" type="checkbox" />
+              <span class="kn-proof-item__text">Logic Working</span>
+            </label>
+            <input
+              class="kn-input kn-input--proof"
+              type="text"
+              placeholder="Describe or link to evidence that the logic behaves as intended."
+            />
+          </div>
+
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input class="kn-checkbox" type="checkbox" />
+              <span class="kn-proof-item__text">Test Passed</span>
+            </label>
+            <input
+              class="kn-input kn-input--proof"
+              type="text"
+              placeholder="Reference the test run, report, or suite that has passed."
+            />
+          </div>
+
+          <div class="kn-proof-item">
+            <label class="kn-proof-item__label">
+              <input class="kn-checkbox" type="checkbox" />
+              <span class="kn-proof-item__text">Deployed</span>
+            </label>
+            <input
+              class="kn-input kn-input--proof"
+              type="text"
+              placeholder="Record where and when this build was deployed."
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
