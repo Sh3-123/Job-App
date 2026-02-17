@@ -1,0 +1,2 @@
+test : file:///home/shawn/Desktop/Job Application/1:6 (Copy)/index.html#/jt/07-test
+ship : file:///home/shawn/Desktop/Job Application/1:6 (Copy)/index.html#/jt/08-ship
